@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Aventura Musical - Para Mi Amor 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ========== PANTALLA INICIAL CON LOS 5 COFRES ========== -->
+    <div id="pantalla-inicial" class="pantalla activa">
+        <div class="fondo-nocturno">
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+            <div class="estrella"></div>
+        </div>
+
+        <div class="contenedor-inicial">
+            <h1 class="titulo-principal">💕 Aventura Musical 💕</h1>
+            <p class="subtitulo-inicial">Abre los 5 cofres del amor</p>
+
+            <!-- GRID DE 5 COFRES -->
+            <div class="grid-cofres-inicio">
+                <!-- COFRE 1 -->
+                <div class="cofre-item" onclick="abrirCofre(0)" id="cofre-0">
+                    <img src="4230567.png" alt="Cofre 1" class="cofre-imagen">
+                    <p class="numero-cofre">Cofre 1</p>
+                </div>
+
+                <!-- COFRE 2 -->
+                <div class="cofre-item" onclick="abrirCofre(1)" id="cofre-1">
+                    <img src="4230567.png" alt="Cofre 2" class="cofre-imagen">
+                    <p class="numero-cofre">Cofre 2</p>
+                </div>
+
+                <!-- COFRE 3 -->
+                <div class="cofre-item" onclick="abrirCofre(2)" id="cofre-2">
+                    <img src="4230567.png" alt="Cofre 3" class="cofre-imagen">
+                    <p class="numero-cofre">Cofre 3</p>
+                </div>
+
+                <!-- COFRE 4 -->
+                <div class="cofre-item" onclick="abrirCofre(3)" id="cofre-3">
+                    <img src="4230567.png" alt="Cofre 4" class="cofre-imagen">
+                    <p class="numero-cofre">Cofre 4</p>
+                </div>
+
+                <!-- COFRE 5 -->
+                <div class="cofre-item" onclick="abrirCofre(4)" id="cofre-4">
+                    <img src="4230567.png" alt="Cofre 5" class="cofre-imagen">
+                    <p class="numero-cofre">Cofre 5</p>
+                </div>
+            </div>
+
+            <!-- TEXTO OBJETIVO -->
+            <p class="texto-objetivo">✨ Abre los 5 cofres para conseguir mi perdón ✨</p>
+            <p class="contador-cofres">Cofres abiertos: <span id="contador">0</span>/5</p>
+        </div>
+    </div>
+
+    <!-- ========== MINI-JUEGO MODAL ========== -->
+    <div id="modal-juego" class="modal">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarModal()">✕</button>
+            <div id="contenedor-minijuego"></div>
+        </div>
+    </div>
+
+    <!-- ========== PANTALLA DE COFRE ABIERTO ========== -->
+    <div id="pantalla-cofre-abierto" class="pantalla">
+        <button class="btn-volver" onclick="volverAlJuego()">← Volver</button>
+
+        <div class="contenedor-cofre-abierto">
+            <!-- IMAGEN -->
+            <div class="seccion-imagen">
+                <img id="imagen-cofre" src="4230567.png" alt="Imagen del cofre" class="imagen-cofre">
+            </div>
+
+            <!-- MENSAJE -->
+            <div class="seccion-mensaje">
+                <p class="mensaje-cofre" id="mensaje-cofre">
+                    💌 [COLOCA TU MENSAJE ROMÁNTICO AQUÍ]
+                </p>
+            </div>
+
+            <!-- REPRODUCTOR DE MÚSICA -->
+            <div class="seccion-musica">
+                <h3 id="titulo-cancion">🎵 Tu Canción</h3>
+                <audio id="audio-cofre" controls style="width: 100%; margin: 20px 0;">
+                    <source src="" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                    <p class="instruccion-final">🎧 [COLOCA UNA CANCIÓN O MIX FINAL AQUÍ]</p>
+            </div>
+            </audio>
+
+        </div>
+    </div>
+
+    <!-- ========== ESCENA FINAL ÉPICA ========== -->
+    <div id="pantalla-final" class="pantalla">
+        <div class="contenedor-final">
+            <h1 class="titulo-final">✨ Te Amo, Mi Amor ✨</h1>
+
+            <div class="galeria-final">
+                <img id="final-img-1" src="atardecer.jpg" alt="Recuerdo 1" class="foto-final">
+                <img id="final-img-2" src="lago.jpg" alt="Recuerdo 2" class="foto-final">
+                <img id="final-img-3" src="primera.jpg" alt="Recuerdo 3" class="foto-final">
+                <img id="final-img-4" src="snk.jpg" alt="Recuerdo 4" class="foto-final">
+                <img id="final-img-5" src="pijama.jpg" alt="Recuerdo 5" class="foto-final">
+            </div>
+
+            <div class="mensaje-final">
+                <p class="texto-final">Ya quiero que todos estas imágenes se hagan realidad, vivir cada experiencia
+                    contigo, experimentar este bello amor en persona, amarte cada dia, darte tantos cariño, tanto amor,
+                    tantos besos... Te amo tanto, mami...
+                </p>
+                <p class="texto-final grande">¡SOY TU BOBITO, MAMI! 💕</p>
+            </div>
+
+            <!-- REPRODUCTOR FINAL -->
+            <div class="musica-final">
+                <h3>🎼 La Sinfonía de Nuestro Amor 🎼</h3>
+                <audio id="audio-final" controls style="width: 100%;">
+                    <source src="Passenger.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+
+            </div>
+
+            <button class="btn-reiniciar" onclick="reiniciarJuego()">🔄 Volver al Inicio</button>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="main.js"></script>
+</body>
+
+</html>
